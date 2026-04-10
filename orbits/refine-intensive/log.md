@@ -37,7 +37,7 @@ wall-clock time.
    runs with progressively finer perturbations and lower temperatures. This allows
    escaping local optima in early phases while polishing in later phases.
 
-4. **Focused moves**: With probability 0.35-0.55 (increasing per phase), the moved
+4. **Focused moves**: With probability 0.30-0.55 (increasing per phase), the moved
    point is chosen from the current minimum-area triangle. This focuses search effort
    where it matters most.
 
@@ -76,6 +76,10 @@ squeezed out another 0.0000007, reaching 0.036530.
 - metric = 0.036530 (normalized min area)
 - combined_score = 0.999998 (99.9998% of SOTA)
 - Improvement from parent: 0.036301 -> 0.036530 (+0.63%)
+
+### Reproducibility note
+
+Due to multiprocessing non-determinism (OS scheduling, cache effects), exact per-seed timings and intermediate metrics may vary slightly across runs. The final metric (0.036530) is stable across seeds and runs. Pin seeds 42, 123, 7 to reproduce the reported configuration.
 
 ### Symmetry observations
 
