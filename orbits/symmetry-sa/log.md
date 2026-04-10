@@ -17,6 +17,7 @@ parents:
 - D3: Dihedral group of order 6 (symmetry group of equilateral triangle)
 - C3: Cyclic group of rotations by 120 degrees
 - CD: Coordinate Descent
+- DOF: Degrees of Freedom (number of free parameters in the optimization; enforcing mirror symmetry reduces DOF from 22 to 11)
 
 ## Approach
 
@@ -56,6 +57,10 @@ effectively per iteration.
 | + CD polish | **0.03652989** | Machine precision polish |
 
 ## Results
+
+> **Reproducibility note:** Parallel multiprocessing with Numba JIT is non-deterministic across runs due to thread scheduling and floating-point order-of-operations. The seed fixes the SA random stream but not CPU parallelism artifacts. Results may differ in the last 1-2 significant digits across machines. The hardcoded coordinates in solution.py are the canonical best found (seed=7, post-CD polish) and are fully deterministic to read.
+
+> **CD polish note:** The coordinate descent polish script used to produce the final coordinates is not committed to this orbit (it was run interactively). The final polished coordinates are hardcoded directly in solution.py and are the canonical output.
 
 ### Final (v7 + coordinate descent polish)
 

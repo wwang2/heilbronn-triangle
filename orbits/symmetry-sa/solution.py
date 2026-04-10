@@ -12,7 +12,7 @@ def heilbronn_triangle11() -> np.ndarray:
     Found by: 3-phase Numba SA (symmetric-enforced -> fine-tune -> unconstrained),
     600M iterations, seed=7, followed by symmetric coordinate descent polish.
     
-    Metric: 0.036530 (combined_score = 0.999999, 99.99998% of SOTA)
+    Metric: 0.036530 (combined_score = 0.9999998, 99.99998% of SOTA)
     """
     points = np.array([
         [0.1062310492450264, 0.0710766377932213],
