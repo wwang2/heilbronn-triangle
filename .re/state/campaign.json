@@ -7,8 +7,8 @@
   "eval_version": "eval-v1",
   "direction": "maximize",
   "metric_name": "Normalized min area",
-  "best_metric": 0.036301,
-  "best_orbit": "known-literature",
+  "best_metric": 0.036530,
+  "best_orbit": "symmetry-sa",
   "sota": 0.03653,
   "autorun": true,
   "autorun_review_overrides": {

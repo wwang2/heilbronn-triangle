@@ -38,3 +38,15 @@
 - EXTEND known-literature → gradient-local (#6): L-BFGS-B + softmin continuation method
 - EXPLORE symmetry-sa (#7): D3 symmetry-constrained search
 - All 3 agents dispatched in background
+
+## Milestone 2 (6 orbits complete, SOTA matched)
+- **Best:** symmetry-sa 0.036529884 (combined_score=0.9999998)
+- refine-intensive: 0.036529802 (99.9998%) — READY
+- gradient-local: 0.036529794 (99.9997%) — under review
+- known-literature: 0.036301 (99.4%) — parent, READY
+- scipy-multistart: 0.03474 (95.1%) — concluded
+- sa-basic: 0.035751 (97.9%) — dead-end (RETRACT)
+- **Key insight:** All 3 batch-2 orbits independently converged to the same basin
+- **Symmetry discovery:** Optimal n=11 config has exact mirror symmetry about x=0.5
+- **Gap to SOTA benchmark:** ~6e-9 (at numerical precision limits)
+- **Decision:** SOTA is effectively matched. Consider concluding campaign.
