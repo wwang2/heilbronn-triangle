@@ -1,7 +1,7 @@
 ---
 strategy: known-literature
-status: in-progress
-eval_version: v1
+status: complete
+eval_version: eval-v1
 metric: 0.03630
 issue: 4
 parents:
@@ -13,6 +13,7 @@ parents:
 - SA: Simulated Annealing
 - SOTA: State of the Art (0.03653, AlphaEvolve)
 - DE: Differential Evolution
+- combined_score: Weighted combination of min_area metric and any penalty terms used by the evaluator; best single run achieved combined_score=0.9937
 
 ## Approach
 
@@ -39,6 +40,12 @@ Since exact coordinates are unavailable, we used multi-start simulated annealing
 3. Focused moves: 40% of moves target points in the current smallest triangle
 4. Multi-phase with reheating from best known solution
 5. 3M iterations per seed, 20 seeds in parallel
+
+> **Note on solution.py:** `solution.py` is a static lookup — it returns the best coordinates
+> found during the SA optimization runs described above. The full SA code (with multi-start,
+> reheating, and partial-area updates) ran during exploration and is preserved in the
+> `optimize*.py` files. The key output — the hardcoded point coordinates for seed=13 — is
+> what `heilbronn_triangle11()` returns directly, so evaluation is instantaneous.
 
 ## Results
 
