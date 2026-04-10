@@ -47,7 +47,13 @@ Key SA parameters for the final round:
 - Step size: 3e-4 with adaptive scaling
 - Bottleneck targeting: 50% of moves
 
+## Note on Scripts
+
+`optimize_sa.py` is an earlier SA exploration script (SA1 round) used to test the annealing approach before the main refinement. The final SA3 parameters are documented in the Results table above, but the exact script that produced the SA3 coordinates was not saved. The key output is the hardcoded point configuration in `solution.py`, which encodes the final optimized result.
+
 ## Results
+
+Targeted Nelder-Mead + SA local optimization achieved 0.036530 normalized min area (99.9997% of SOTA), matching the benchmark to within numerical precision.
 
 | Round | Method | Best Metric | vs SOTA | Combined Score |
 |-------|--------|-------------|---------|----------------|

@@ -6,12 +6,12 @@ import matplotlib as mpl
 from itertools import combinations
 
 mpl.rcParams.update({
-    'font.size': 14,
-    'axes.titlesize': 16,
-    'axes.labelsize': 14,
-    'xtick.labelsize': 12,
-    'ytick.labelsize': 12,
-    'legend.fontsize': 11,
+    'font.size': 15,
+    'axes.titlesize': 17,
+    'axes.labelsize': 15,
+    'xtick.labelsize': 13,
+    'ytick.labelsize': 13,
+    'legend.fontsize': 13,
     'figure.dpi': 150,
     'savefig.dpi': 300,
     'savefig.pad_inches': 0.2,
@@ -58,14 +58,14 @@ def compute_all_areas(points):
         c[:, 0] * (a[:, 1] - b[:, 1])
     )
 
-fig, axes = plt.subplots(1, 3, figsize=(18, 5.5), constrained_layout=True)
+fig, axes = plt.subplots(1, 3, figsize=(21, 6), constrained_layout=True)
 
 # Panel (a): Point configurations
 ax = axes[0]
 tri_verts = np.array([[0,0], [1,0], [0.5, SQRT3/2], [0,0]])
 ax.plot(tri_verts[:,0], tri_verts[:,1], 'k-', lw=1.5)
-ax.scatter(PARENT[:,0], PARENT[:,1], c='#4477AA', s=60, zorder=5, label='Parent (0.03630)', alpha=0.7)
-ax.scatter(BEST[:,0], BEST[:,1], c='#EE6677', s=60, zorder=5, label='Best (0.03653)', marker='D', alpha=0.9)
+ax.scatter(PARENT[:,0], PARENT[:,1], c='#4477AA', s=80, zorder=5, label='Parent (0.03630)', marker='^', alpha=0.7)
+ax.scatter(BEST[:,0], BEST[:,1], c='#EE6677', s=80, zorder=5, label='Best (0.03653)', marker='D', alpha=0.9)
 for i in range(11):
     ax.annotate('', xy=BEST[i], xytext=PARENT[i],
                 arrowprops=dict(arrowstyle='->', color='#999999', lw=0.8))
