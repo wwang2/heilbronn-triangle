@@ -1,0 +1,22 @@
+{
+  "question": "Place 11 points in equilateral triangle with vertices (0,0), (1,0), (0.5, sqrt(3)/2) to maximize minimum triangle area among all C(11,3)=165 triplets. Metric: Normalized min area (maximize). SOTA: 0.03653 (AlphaEvolve).",
+  "references": ["https://github.com/algorithmicsuperintelligence/openevolve/tree/main/examples/alphaevolve_math_problems/heilbronn_triangle"],
+  "project_name": "heilbronn-triangle",
+  "status": "setup",
+  "setup_phase": 1,
+  "eval_version": null,
+  "direction": "maximize",
+  "metric_name": "Normalized min area",
+  "best_metric": null,
+  "best_orbit": null,
+  "sota": 0.03653,
+  "autorun": true,
+  "autorun_review_overrides": {
+    "auto_review_on_complete": true,
+    "metric_mismatch_action": "dead-end",
+    "max_rework_iterations": 1,
+    "min_seeds": 3,
+    "sota_gate_threshold": 0.8,
+    "sota_gate_orbit_cap": [10, 20]
+  }
+}
