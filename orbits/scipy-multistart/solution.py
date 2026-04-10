@@ -1,5 +1,10 @@
 """
-Heilbronn Triangle Problem (n=11) — Best found via Scipy Basin-Hopping + DE + Local Search.
+Heilbronn Triangle Problem (n=11) — Static lookup of best configuration.
+
+This module does NOT run any optimization at import or call time. It simply
+returns the hardcoded best point-set discovered by optimize_v4.py (Basin-hopping
++ Differential Evolution + local Nelder-Mead search). The optimization itself
+is in optimize_v4.py; this file records its output for deterministic evaluation.
 """
 
 import numpy as np

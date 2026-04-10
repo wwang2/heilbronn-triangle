@@ -1,7 +1,7 @@
 ---
 strategy: scipy-multistart
-status: in-progress
-eval_version: 1
+status: complete
+eval_version: eval-v1
 metric: 0.03474
 issue: 3
 parents:
@@ -42,6 +42,14 @@ For large beta, this closely approximates the true minimum while remaining diffe
 4. **Multiple perturbation strategies**: uniform, Gaussian, single-point, centroid-directed moves.
 
 ## Results
+
+Basin-hopping + DE achieved 0.03474 normalized min area (95.1% of SOTA).
+
+### Figures
+
+- `figures/best_config.png` — scatter plot of the best 11-point configuration inside the equilateral triangle, with the minimum-area triangle highlighted in red.
+- `figures/convergence.png` — convergence of normalized min area across optimization versions V1→V4 (mean ± std over 3 seeds), with SOTA reference line.
+- `figures/results.png` — combined three-panel overview (configuration, area distribution, convergence).
 
 ### V1: Basic basin-hopping (8 starts, 4-stage beta)
 
