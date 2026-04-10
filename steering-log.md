@@ -50,3 +50,10 @@
 - **Symmetry discovery:** Optimal n=11 config has exact mirror symmetry about x=0.5
 - **Gap to SOTA benchmark:** ~6e-9 (at numerical precision limits)
 - **Decision:** SOTA is effectively matched. Consider concluding campaign.
+
+## Campaign Concluded
+- **Termination reason:** Target met — SOTA effectively matched (gap < 1e-8)
+- **Total orbits:** 7 (4 explore, 2 extend, 1 dead-end)
+- **Best metric:** 0.036529884 from symmetry-sa (99.99998% of SOTA)
+- **Key finding:** Optimal n=11 config has exact mirror symmetry about x=0.5
+- **Search efficiency:** 7 orbits, 2 batches, no anti-stuck brainstorms needed
