@@ -1,40 +1,78 @@
 {
   "orbits": {
     "sa-basic": {
-      "status": "spawned",
+      "status": "dead-end",
       "action": "explore",
       "worktree": ".worktrees/sa-basic",
       "issue": 2,
       "parent_branches": [],
       "refine_count": 0,
-      "verdict": "pending",
-      "metric": null,
+      "verdict": "RETRACT",
+      "metric": 0.035751,
       "created_at": "2026-04-09T22:58:00Z",
-      "updated_at": "2026-04-09T22:58:00Z"
+      "updated_at": "2026-04-10T01:25:00Z"
     },
     "scipy-multistart": {
-      "status": "spawned",
+      "status": "concluded",
       "action": "explore",
       "worktree": ".worktrees/scipy-multistart",
       "issue": 3,
       "parent_branches": [],
       "refine_count": 0,
-      "verdict": "pending",
-      "metric": null,
+      "verdict": "READY-FOR-MILESTONE",
+      "metric": 0.03474,
+      "cleanup_iterations": 1,
       "created_at": "2026-04-09T22:58:00Z",
-      "updated_at": "2026-04-09T22:58:00Z"
+      "updated_at": "2026-04-10T01:25:00Z"
     },
     "known-literature": {
-      "status": "spawned",
+      "status": "promising",
       "action": "explore",
       "worktree": ".worktrees/known-literature",
       "issue": 4,
       "parent_branches": [],
       "refine_count": 0,
       "verdict": "pending",
-      "metric": null,
+      "metric": 0.036301,
+      "cleanup_iterations": 1,
       "created_at": "2026-04-09T22:58:00Z",
-      "updated_at": "2026-04-09T22:58:00Z"
+      "updated_at": "2026-04-10T01:10:00Z"
+    },
+    "refine-intensive": {
+      "status": "spawned",
+      "action": "extend",
+      "worktree": ".worktrees/refine-intensive",
+      "issue": 5,
+      "parent_branches": ["orbit/known-literature"],
+      "refine_count": 0,
+      "verdict": "pending",
+      "metric": null,
+      "created_at": "2026-04-10T01:20:00Z",
+      "updated_at": "2026-04-10T01:20:00Z"
+    },
+    "gradient-local": {
+      "status": "spawned",
+      "action": "extend",
+      "worktree": ".worktrees/gradient-local",
+      "issue": 6,
+      "parent_branches": ["orbit/known-literature"],
+      "refine_count": 0,
+      "verdict": "pending",
+      "metric": null,
+      "created_at": "2026-04-10T01:20:00Z",
+      "updated_at": "2026-04-10T01:20:00Z"
+    },
+    "symmetry-sa": {
+      "status": "spawned",
+      "action": "explore",
+      "worktree": ".worktrees/symmetry-sa",
+      "issue": 7,
+      "parent_branches": [],
+      "refine_count": 0,
+      "verdict": "pending",
+      "metric": null,
+      "created_at": "2026-04-10T01:20:00Z",
+      "updated_at": "2026-04-10T01:20:00Z"
     }
   }
 }
